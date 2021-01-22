@@ -112,3 +112,19 @@ var lima = new StoreBuilder('Lima', 2, 16, 4.6)
 
 footerRow();
 
+
+var formElement = document.getElementById('cookie-shop-form');
+
+formElement.addEventListener('submit', function (event) {
+  event.preventDefault(); 
+  console.log(event.target.location.value);
+  console.log(event.target.minCust.value);
+  console.log(event.target.maxCust.value);
+  console.log(event.target.avgCookiesold.value);
+
+var location = event.target.location.value;
+var minCust = event.target.minCust.value;
+var maxCust = event.target.maxCust.value;
+var avgCookiesold = event.target.avgCookiesold.value;
+
+}
