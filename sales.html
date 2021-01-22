@@ -5,17 +5,47 @@
 
 
 <body>
-  <header>
-    <h1>Salmon Cookie Sales</h1>
-  </header>  
-  <main>
-   <a href="index.html">Home</a>
-    <div>
-      <table id="list"></table>
-      
-    </div>
-    <img src="salmon-cookies img/frosted-cookie.jpg">
+<header>
+  <h1>Salmon Cookie Sales</h1>
+  <a href="index.html">Home</a>
+</header>  
+<main>
+  <section id='shops'></section>
+  <form id="cookie-shop-form">
+    <fieldset>
+      <h2>New Cookie Shop Input Form:</h2>
+      <div>
+        <label>
+          Location:
+          <input type="text" name='location'>
+        </label>
+      </div>
+      <div>
+        <label>
+          Minimum Customers:
+          <input type="text" name='minCust'>
+        </label>
+      </div>
+      <div>
+        <label>
+          Maximum Customers
+          <input type="text" name='maxCust'>
+        </label>
+      </div>
+      <div>
+        <label>
+          Average Hourly Cookie Sales
+          <input type="number" step=".5" name='avgCookiesold'>
+        </label>
+        <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+
+  <table id="list"></table>
+  <img src="salmon-cookies img/frosted-cookie.jpg">
   </main>
 <script src="app.js"></script>
 
 </body>
+
