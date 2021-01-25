@@ -96,20 +96,16 @@ function footerRow(){
 }
 
 var seattle = new StoreBuilder('Seattle', 23, 65, 6.3)
-// console.log(seattle)
 
 var tokyo = new StoreBuilder('Tokyo', 3, 24, 1.2)
-// console.log(tokyo)
 
 var dubai = new StoreBuilder('Dubai', 11, 38, 3.7)
-// console.log(dubai)
 
 var paris = new StoreBuilder('Paris', 20, 38, 2.3)
-// console.log(paris)
 
 var lima = new StoreBuilder('Lima', 2, 16, 4.6)
-// console.log(lima)
 
+var storeLocations = [seattle, tokyo, dubai, paris, lima];
 footerRow();
 
 
@@ -127,4 +123,17 @@ var minCust = event.target.minCust.value;
 var maxCust = event.target.maxCust.value;
 var avgCookiesold = event.target.avgCookiesold.value;
 
-}
+
+var newStoreFromConstructor = new StoreBuilder(location, minCust, maxCust, avgCookiesold)
+
+storeLocations.push(newStoreFromConstructor);
+
+newStoreFromConstructor.avgCookiesPerHourTotal();
+
+var removeEl = document.getElementsByTagName('tr')[storeLocations.length];
+var containerEl = removeEl.parentNode;
+containerEl.removeChild(removeEl);
+
+footerRow();
+
+})
